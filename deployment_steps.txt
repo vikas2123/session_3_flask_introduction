@@ -1,0 +1,32 @@
+Inside hello.py file
+
+hello.py file we had created the routings just like the raml file
+
+pancakes = Flask(__name__)
+
+pancakes is the name of the api we had created
+
+@pancakes.route('/hello', methods=['GET'])
+def hello():
+    "A simple hello world endpoint for Flask"
+    return {"message": "Hello, World!"}
+
+In this pancakes is the decorator
+
+
+insert the train.csv file 
+
+insert the train_ml.ipynb file and this 
+
+import joblib
+joblib.dump(model, 'classifier.pkl')
+
+which creates the .pkl file helps to create the train_ml,ipynb for the Flask
+
+now go to the app.py file and insert the below stmnt to load the .pkl file
+
+model = joblib.load('classifier.pkl')
+
+save 
+
+now in the termianal run this command python -m flask --app hello.py run
